@@ -1,0 +1,16 @@
+@import '@styles/vars/main';
+
+.container {
+}
+
+.heading {
+  text-transform: capitalize;
+}
+
+.coverImg {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: 10;
+  background-color: aliceblue;
+}

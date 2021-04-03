@@ -1,0 +1,9 @@
+@import '@styles/vars/main.scss';
+
+.container {
+  @include clamp;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
