@@ -1,13 +1,16 @@
 ---
 name: "plantopi"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus."
-coverImg: "/assets/plantopi.gif"
-date: "2020-03-16T05:35:07.322Z"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus."
+coverImage: "null"
+collaborators:
+  name: Cx Garcia
+  picture: "null"
 ogImage:
   url: "null"
-techStack:
-  frontend: TypeScript, React, Sass, GSAP
-  backend: NestJS, TypeORM, PostgreSQL, MQTT.js, Socket.io
+tech:
+  frontend: "React,TypeScript,Sass,GSAP"
+  backend: "NestJS,TypeORM,PostgreSQL,MQTT.js"
+  IoT: "Raspberry Pi,Mosquitto,NodeMCU"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
