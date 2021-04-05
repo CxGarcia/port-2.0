@@ -1,9 +1,6 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 a {
@@ -13,4 +10,189 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+//FONT STYLES//
+$base-size: 1rem;
+$type-scale: 1.33;
+
+$h3: calc(#{$base-size} * #{$type-scale});
+$h2: calc(#{$h3} * #{$type-scale});
+$h1: calc(#{$h2} * #{$type-scale});
+$text-sm: calc(#{$base-size} / #{$type-scale});
+$header-margin: 0 0 1rem 2rem;
+
+h1 {
+  font-size: $h1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: $h2;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: $h3;
+  font-weight: 500;
+}
+
+p {
+  font-size: $base-size;
+  font-weight: 300;
+}
+
+small,
+.text-small {
+  font-size: $text-sm;
+}
+
+section > h1 {
+  font-size: $text-sm;
+}
+header h1 {
+  font-size: calc(#{$h1} * #{$type-scale});
+}
+header h2 {
+  font-size: $text-sm;
+  margin: $header-margin;
+}
+#resources h1 {
+  font-size: $h2;
+}
+#resources h1 small {
+  font-size: $base-size;
+}
+
+@media (min-width: 200px) {
+  $type-scale: 1.125;
+}
+
+@media (min-width: 740px) {
+  $type-scale: 1.25;
+  $header-margin: 0 0 1rem 8rem;
+}
+
+//RESET CSS//
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
