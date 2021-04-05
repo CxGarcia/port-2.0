@@ -3,6 +3,24 @@
 .icon {
   height: 30px;
   width: 30px;
+  fill: $primary;
+  // stroke: $primary;
+  // stroke-width: 0.5;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.layer {
+  width: 20%;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid $primary;
 }
 
 .techContainer {
@@ -12,6 +30,6 @@
   justify-content: flex-start;
 
   & > * {
-    margin: 0 0.25rem;
+    margin: 0.5rem 0.25rem;
   }
 }

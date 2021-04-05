@@ -1,15 +1,18 @@
 import ProjectHeading from '@components/projects/project-heading';
 import TechStack from '@components/projects/tech-stack';
 
+import logos from '@resources/logos';
 import { getPath, getFileContent } from '@utils/getPosts';
 import { markdownToHTML } from '@utils/markdownToHTML';
 
 export default function Synthesis({ project, content }) {
   const { name, tech } = project;
+  const Logo = logos[name];
 
   return (
     <>
       <ProjectHeading name={name} />
+      <Logo />
       {renderTech(tech)}
       <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </>

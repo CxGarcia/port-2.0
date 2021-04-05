@@ -1,6 +1,9 @@
+@import './vars/main.scss';
+
 html,
 body {
   font-family: 'Montserrat Alternates', sans-serif;
+  background: $bg;
 }
 
 a {
@@ -155,6 +158,7 @@ time,
 mark,
 audio,
 video {
+  color: $primary;
   margin: 0;
   padding: 0;
   border: 0;

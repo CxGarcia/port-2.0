@@ -9,7 +9,7 @@ ogImage:
   url: "null"
 tech:
   frontend: "React,TypeScript,Sass,GSAP"
-  backend: "NestJS,TypeORM,PostgreSQL,MQTT.js"
+  backend: "NestJS,Socket.io,TypeORM,PostgreSQL,MQTT.js"
   IoT: "Raspberry Pi,Mosquitto,NodeMCU"
 ---
 
