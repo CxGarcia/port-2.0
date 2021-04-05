@@ -21,7 +21,10 @@ export default function Synthesis({ project, content }) {
       </header>
 
       {renderTech(tech)}
-      <section dangerouslySetInnerHTML={{ __html: content }}></section>
+      <section
+        className={styles.body}
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></section>
     </>
   );
 }

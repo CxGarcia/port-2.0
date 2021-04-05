@@ -12,3 +12,11 @@
   width: 50%;
   text-align: center;
 }
+
+.body {
+  @include clamp;
+
+  & * {
+    max-width: 100%;
+  }
+}
