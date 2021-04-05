@@ -1,8 +1,8 @@
 @import '@styles/vars/main';
 
 .icon {
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 60px;
   fill: $primary;
   // stroke: $primary;
   // stroke-width: 0.5;
@@ -17,10 +17,8 @@
 }
 
 .layer {
-  width: 20%;
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 1px solid $primary;
 }
 
 .techContainer {
@@ -31,5 +29,8 @@
 
   & > * {
     margin: 0.5rem 0.25rem;
+  }
+  & > a {
+    @include shrink-hover;
   }
 }

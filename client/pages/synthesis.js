@@ -5,16 +5,23 @@ import logos from '@resources/logos';
 import { getPath, getFileContent } from '@utils/getPosts';
 import { markdownToHTML } from '@utils/markdownToHTML';
 
+import styles from '@styles/projects/Synthesis.module.scss';
+
 export default function Synthesis({ project, content }) {
   const { name, tech } = project;
   const Logo = logos[name];
 
   return (
     <>
-      <ProjectHeading name={name} />
-      <Logo />
+      <header>
+        <div className={styles.logoContainer}>
+          <Logo className={styles.logo} />
+        </div>
+        {/* <ProjectHeading name={name} /> */}
+      </header>
+
       {renderTech(tech)}
-      <div dangerouslySetInnerHTML={{ __html: content }}></div>
+      <section dangerouslySetInnerHTML={{ __html: content }}></section>
     </>
   );
 }
