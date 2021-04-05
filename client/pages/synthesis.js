@@ -10,6 +10,7 @@ export default function Synthesis({ project, content }) {
   return (
     <>
       <ProjectHeading name={name} />
+      {renderTech(tech)}
       <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </>
   );
@@ -28,4 +29,12 @@ export async function getStaticProps() {
       content: parsedContent,
     },
   };
+}
+
+//methods shared by all projects
+
+function renderTech(tech) {
+  return Object.entries(tech).map(([key, values], idx) => {
+    return <TechStack layer={key} items={values} key={key + idx} />;
+  });
 }

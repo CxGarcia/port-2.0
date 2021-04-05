@@ -8,7 +8,7 @@ collaborators:
 ogImage:
   url: "null"
 tech:
-  frontend: "React,Tone.js,Sass"
+  frontend: "React,Sass,Tone.js"
   backend: "Koa,Node.js"
 ---
 
