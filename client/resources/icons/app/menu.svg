@@ -1,0 +1,5 @@
+     <svg aria-label="Open main menu" viewBox="0 0 10 8" width="20" height="20" id="burger" class="burger" stroke="#000" stroke-width="10">
+       <path d="M1 1h8" id="line l1" class="line l1" />
+       <path d="M1 4h 8" id="line" class="line l2" />
+       <path d="M1 7h8" id="line3" class="line l3" />
+     </svg>
