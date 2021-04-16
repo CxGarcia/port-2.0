@@ -1,19 +1,19 @@
 @import '@styles/vars/main';
 
 .icon {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   fill: $primary;
   // stroke: $primary;
   // stroke-width: 0.5;
 }
 
 .container {
-  width: 100%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 60%;
 }
 
 .layer {
@@ -26,9 +26,8 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
-
   & > * {
-    margin: 0.5rem 0.25rem;
+    margin: 0 0.5rem;
   }
   & > a {
     @include shrink-hover;

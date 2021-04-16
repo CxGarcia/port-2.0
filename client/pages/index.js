@@ -1,5 +1,6 @@
-import Logo from '@resources/logos/cx';
 import Mountains from '@components/home/Mountains';
+import TechStack from '@components/projects/tech-stack';
+import PlantopiLogo from '@components/home/PlantopiLogo';
 
 import LinkedIn from '@resources/icons/social/linkedin.svg';
 import GitHub from '@resources/icons/social/github.svg';
@@ -21,20 +22,21 @@ export default function Home() {
             target="_blank"
             aria-label="Link to LinkedIn profile"
           >
-            <LinkedIn />
+            <LinkedIn className={styles.socialIcon} />
           </a>
           <a
             href="https://github.com/cxgarcia"
             target="_blank"
             aria-label="Link to GitHub profile"
           >
-            <GitHub />
+            <GitHub className={styles.socialIcon} />
           </a>
           <a
             href="personal-resources/cv-cristobal-schlaubitz-garcia.pdf"
+            aria-label="Download CV"
             download
           >
-            <CV />
+            <CV className={styles.socialIcon} />
           </a>
         </div>
       </nav>
@@ -76,18 +78,34 @@ export default function Home() {
           to kitesurf, doing yoga, or trekking.
         </p>
       </section>
-      <section className={styles.plantopi}>
+      <section className={`${styles.plantopi} plantopi`}>
         <TransitionMountain className={styles.transitionMountain} />
-        <h1>Plantopi</h1>
-        <p>
-          Plantopi is an automatic irrigation system that allows plant owners to
-          remotely water and monitor their plants. Users can create multiple
-          areas, each with their own set of humidity sensors and controllers
-          (water pumps, electrovalves, lights, etc.), and setup irrigation
-          schedules based on their plants' needs. The application communicates
-          with Arduinos and a Raspberry Pi for IoT control and makes use of Open
-          Weather API for weather data.
-        </p>
+        <div className={styles.sectionText}>
+          <span className={styles.projectHeader}>
+            <h1>Plantopi</h1>{' '}
+            <a
+              href="https://github.com/dev-collectiv/plantopi"
+              target="_blank"
+              aria-label="Link to GitHub profile"
+            >
+              <GitHub className={styles.socialIcon} />
+            </a>
+          </span>
+          <p>
+            Plantopi is an automatic irrigation system that allows plant owners
+            to remotely water and monitor their plants. Users can create
+            multiple areas, each with their own set of humidity sensors and
+            controllers (water pumps, electrovalves, lights, etc.), and setup
+            irrigation schedules based on their plants' needs. The application
+            communicates with Arduinos and a Raspberry Pi for IoT control and
+            makes use of Open Weather API for weather data.
+          </p>
+          <TechStack
+            layer="tech stack"
+            items="React,TypeScript,Sass,GSAP,NestJS,Socket.io,TypeORM,PostgreSQL,MQTT.js,Raspberry Pi,Mosquitto,NodeMCU"
+          />
+        </div>
+        <PlantopiLogo />
       </section>
       <section className={styles.synthesis}>
         <h1>Synthesis</h1>
@@ -98,6 +116,7 @@ export default function Home() {
           samples, various synthesizers, and digital effects to make music from
           a wide range of genres.
         </p>
+        <TechStack layer="tech stack" items="React,Sass,Tone.js,Koa,Node.js" />
       </section>
 
       <footer className={styles.footer}></footer>

@@ -28,10 +28,10 @@ function TechStack({ layer, items }) {
   }
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.layer}>{layer}</h1>
+    <span className={styles.container}>
+      <h2 className={styles.layer}>{layer}</h2>
       {renderItems()}
-    </div>
+    </span>
   );
 }
 

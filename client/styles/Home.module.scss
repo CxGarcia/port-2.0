@@ -13,7 +13,7 @@
 
   overflow-x: hidden;
 }
-$text-container-width: 80%;
+$text-container-width: 60%;
 
 @media (min-width: 400px) {
   $text-container-width: 80%;
@@ -61,11 +61,26 @@ $sections-padding: 2.5rem;
   align-items: top;
   justify-content: center;
   & > * {
-    @include shrink-hover;
-    margin: 0 0.5rem;
-    height: 40px;
-    width: 40px;
     fill: white;
+    margin: 0 0.5rem;
+  }
+}
+
+.socialIcon {
+  @include shrink-hover;
+  height: 40px;
+  width: 40px;
+}
+
+.projectHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  & .socialIcon {
+    height: 25px;
+    width: 25px;
+    fill: $primary;
+    margin: 0 1rem;
   }
 }
 
@@ -78,6 +93,25 @@ $sections-padding: 2.5rem;
   display: flex;
   padding: $sections-padding;
   position: relative;
+}
+
+@mixin section-text($color) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    max-width: $text-container-width;
+    line-height: 2rem;
+    z-index: 1;
+    color: $color;
+  }
+
+  & p {
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 1rem 0;
+  }
 }
 
 .intro,
@@ -101,18 +135,7 @@ $sections-padding: 2.5rem;
 .about {
   flex-flow: column nowrap;
   align-items: center;
-  & > * {
-    width: $text-container-width;
-    color: $secondary-font-color;
-    line-height: 2.5rem;
-    z-index: 1;
-  }
-
-  & p {
-    text-align: justify;
-    text-justify: inter-word;
-    margin: 1rem 0;
-  }
+  @include section-text($secondary-font-color);
 }
 
 .transitionMountain {
@@ -127,6 +150,13 @@ $sections-padding: 2.5rem;
   & > * {
     margin: 1rem 0;
   }
+}
+
+.plantopi {
+  @include section-text($font-color);
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .synthesis,
