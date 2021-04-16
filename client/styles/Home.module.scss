@@ -13,11 +13,25 @@
 
   overflow-x: hidden;
 }
+$text-container-width: 80%;
+
+@media (min-width: 400px) {
+  $text-container-width: 80%;
+}
+
+@media (min-width: 1400px) {
+  $text-container-width: 60%;
+}
+
+@media (min-width: 1800px) {
+  $text-container-width: 40%;
+}
 
 .logo {
   padding: 0.5rem 1rem;
   border: 2px solid white;
   color: white;
+
   span {
     display: inline-block;
     color: white;
@@ -33,13 +47,11 @@ $sections-padding: 2.5rem;
   position: fixed;
   top: 0;
   mix-blend-mode: difference;
-
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-  // backdrop-filter: blur(3px);
   padding: 0 $sections-padding;
 }
 
@@ -68,20 +80,38 @@ $sections-padding: 2.5rem;
   position: relative;
 }
 
+.intro,
 .about,
 .plantopi,
 .synthesis {
   @include main-section;
 }
 
-.about {
+.intro {
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
   h2 {
-    width: 40%;
+    width: $text-container-width;
     color: $font-color;
     line-height: 2.5rem;
+  }
+}
+
+.about {
+  flex-flow: column nowrap;
+  align-items: center;
+  & > * {
+    width: $text-container-width;
+    color: $secondary-font-color;
+    line-height: 2.5rem;
+    z-index: 1;
+  }
+
+  & p {
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 1rem 0;
   }
 }
 
@@ -99,12 +129,9 @@ $sections-padding: 2.5rem;
   }
 }
 
-.synthesis {
+.synthesis,
+.about {
   background-color: #343d54;
-}
-
-.footer {
-  grid-area: foot;
 }
 
 @keyframes blink {

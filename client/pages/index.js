@@ -39,24 +39,41 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className={`${styles.about} about`}>
+      <section className={`${styles.intro} intro`}>
         <div className={styles.sectionText}>
           <h2>
             Hey There! My name is Cristobal and I am a Full Stack Developer from
             Venezuela
           </h2>
-          <p></p>
         </div>
         <Mountains />
       </section>
-      <section className={styles.synthesis}>
-        <h1>Synthesis</h1>
+
+      <section className={styles.about}>
+        <h2>About Me</h2>
         <p>
-          Synthesis is an open-source Digital Audio Workstation built in React
-          and Koa.js so that music producers can make beats from the comfort of
-          their browser. The app's library is furnished with thousands of
-          samples, various synthesizers, and digital effects to make music from
-          a wide range of genres.
+          I spent five years working in the energy industry. The more experience
+          I gained, the more I convinced myself that software is the best way to
+          add value to energy, and the more I understood I was at the wrong end
+          of the value chain. This realization, plus my passion for creating,
+          paved the way for me to become a developer.
+        </p>
+        <p>
+          In my over two years of experience as a Full Stack Developer, I have
+          worked with many technologies, including JavaScript, TypeScript,
+          React, Sass, Node.js, PostgreSQL, Docker, Nginx, IoT, and many others.
+        </p>
+        <p>
+          Ever since I built my first fully functional app that uses the Spotify
+          API to search for songs and create playlists, I knew I was doing what
+          I loved. Since that first app, I have come a long way, having worked
+          in many different projects ranging from a digital audio workstation to
+          venturing into the world of the internet of things by building an
+          automatic irrigation system.
+        </p>
+        <p>
+          When not writing code, I am usually on the road looking for a new spot
+          to kitesurf, doing yoga, or trekking.
         </p>
       </section>
       <section className={styles.plantopi}>
@@ -70,6 +87,16 @@ export default function Home() {
           schedules based on their plants' needs. The application communicates
           with Arduinos and a Raspberry Pi for IoT control and makes use of Open
           Weather API for weather data.
+        </p>
+      </section>
+      <section className={styles.synthesis}>
+        <h1>Synthesis</h1>
+        <p>
+          Synthesis is an open-source Digital Audio Workstation built in React
+          and Koa.js so that music producers can make beats from the comfort of
+          their browser. The app's library is furnished with thousands of
+          samples, various synthesizers, and digital effects to make music from
+          a wide range of genres.
         </p>
       </section>
 
