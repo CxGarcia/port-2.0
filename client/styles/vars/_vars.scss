@@ -1,13 +1,11 @@
-$main-font: 'Roboto', sans-serif;
-
-$font-color: #282a36;
-$secondary-font-color: #f5ffb7;
-
-$primary: #282a36;
+$primary: rgb(52, 61, 84);
 $secondary: #b2ac9d;
 
-$hightlights: #f5ffb7;
-$highlights-2: #fff;
+$main-font: 'Roboto', sans-serif;
+$font-color: #282a36;
+$secondary-font-color: $primary;
 
+$hightlights: rgb(163, 107, 129);
+$highlights-2: rgb(155, 115, 140);
 $bg: #e9e2cf;
 $bg-light: #fff;

@@ -12,8 +12,16 @@
   justify-content: center;
 
   overflow-x: hidden;
-  & > * {
-    // border: 1px solid red;
+}
+
+.logo {
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  color: white;
+  span {
+    display: inline-block;
+    color: white;
+    transform-origin: 50% 90%;
   }
 }
 
@@ -24,14 +32,29 @@ $sections-padding: 2.5rem;
   min-height: 10vh;
   position: fixed;
   top: 0;
+  mix-blend-mode: difference;
 
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-
-  backdrop-filter: blur(3px);
+  z-index: 1;
+  // backdrop-filter: blur(3px);
   padding: 0 $sections-padding;
+}
+
+.social {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: top;
+  justify-content: center;
+  & > * {
+    @include shrink-hover;
+    margin: 0 0.5rem;
+    height: 40px;
+    width: 40px;
+    fill: white;
+  }
 }
 
 @mixin main-section {
@@ -41,8 +64,8 @@ $sections-padding: 2.5rem;
   max-height: 100vh;
 
   display: flex;
-
   padding: $sections-padding;
+  position: relative;
 }
 
 .about,
@@ -52,24 +75,46 @@ $sections-padding: 2.5rem;
 }
 
 .about {
-  position: relative;
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
-  h1,
-  p {
+  h2 {
     width: 40%;
+    color: $font-color;
+    line-height: 2.5rem;
   }
 }
 
-.aboutText {
+.transitionMountain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.sectionText {
   z-index: 1;
+  & > * {
+    margin: 1rem 0;
+  }
 }
 
 .synthesis {
-  background-color: rgb(51, 60, 84);
+  background-color: #343d54;
 }
 
 .footer {
   grid-area: foot;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0);
+  }
 }
