@@ -4,16 +4,16 @@ import { gsap } from 'gsap';
 const Logo = () => {
   const pathRef = useRef(null);
 
-  useEffect(() => {
-    gsap.to(pathRef.current, {
-      duration: 0.75,
-      repeat: -1,
-      yoyo: true,
-      autoAlpha: 0,
-    });
+  // useEffect(() => {
+  //   gsap.to(pathRef.current, {
+  //     duration: 0.75,
+  //     repeat: -1,
+  //     yoyo: true,
+  //     autoAlpha: 0,
+  //   });
 
-    return () => gsap.killTweensOf('.underscore');
-  }, []);
+  //   return () => gsap.killTweensOf('.underscore');
+  // }, []);
 
   return (
     <svg

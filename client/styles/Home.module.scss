@@ -52,6 +52,7 @@ $sections-padding: 2.5rem;
 }
 
 .about {
+  position: relative;
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
@@ -59,6 +60,14 @@ $sections-padding: 2.5rem;
   p {
     width: 40%;
   }
+}
+
+.aboutText {
+  z-index: 1;
+}
+
+.synthesis {
+  background-color: rgb(51, 60, 84);
 }
 
 .footer {
