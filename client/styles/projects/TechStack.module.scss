@@ -3,7 +3,7 @@
 .icon {
   height: 40px;
   width: 40px;
-  fill: $primary;
+  // fill: $primary;
   // stroke: $primary;
   // stroke-width: 0.5;
 }
@@ -20,8 +20,6 @@
 
 .layer {
   text-align: center;
-  border-bottom: 2px solid $primary;
-  text-transform: uppercase;
   width: 40%;
 }
 

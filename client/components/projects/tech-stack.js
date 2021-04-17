@@ -18,7 +18,7 @@ function TechStack({ layer, items, fill }) {
                 key={name + idx}
                 rel="noopener noreferrer"
               >
-                <Icon className={styles.icon} styles={{ fill }} />
+                <Icon className={styles.icon} style={{ fill: fill }} />
               </a>
             );
           } else return null;

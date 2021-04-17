@@ -63,13 +63,9 @@ $sections-padding: 2.5rem;
   & > * {
     fill: white;
     margin: 0 0.5rem;
+    width: 40px;
+    height: 40px;
   }
-}
-
-.socialIcon {
-  @include shrink-hover;
-  height: 40px;
-  width: 40px;
 }
 
 .projectHeader {
@@ -77,8 +73,8 @@ $sections-padding: 2.5rem;
   flex-flow: row nowrap;
   align-items: center;
   & .socialIcon {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     fill: $primary;
     margin: 0 1rem;
   }
@@ -96,7 +92,6 @@ $sections-padding: 2.5rem;
 }
 
 @mixin section-text($color) {
-  z-index: 1;
   h1,
   h2,
   h3,
@@ -147,19 +142,47 @@ $sections-padding: 2.5rem;
   width: 100vw;
 }
 
-.sectionText {
-}
-
 .plantopi {
   @include section-text($font-color);
-  border: 1px solid red;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-evenly;
   max-width: 100%;
   & > * {
+    color: $font-color;
     max-width: 50%;
   }
+  .projectSocialIcon {
+    fill: $primary;
+  }
+}
+
+.synthesis {
+  @include section-text($secondary-font-color);
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100%;
+  & > * {
+    color: $font-color;
+    max-width: 50%;
+  }
+  .projectSocialIcon {
+    fill: $primary;
+  }
+}
+
+.projectText {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: $font-color;
+}
+
+.projectSocialIcon {
+  @include shrink-hover;
+  height: 40px;
+  width: 40px;
 }
 
 .synthesis,

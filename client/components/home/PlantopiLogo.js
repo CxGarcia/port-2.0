@@ -10,7 +10,9 @@ if (typeof window !== 'undefined') {
 
 function PlantopiLogo() {
   useEffect(() => {
-    gsap.from('.circle', {
+    const tl = gsap.timeline();
+
+    tl.from('.circle', {
       scrollTrigger: {
         trigger: '.plantopi',
         scrub: 1,
@@ -20,13 +22,30 @@ function PlantopiLogo() {
       transformOrigin: 'center center',
       scaleX: 0,
       scaleY: 0,
-      // onComplete: repeatedAnimation,
       stagger: {
         each: 0.25,
         from: 'end',
       },
       duration: 0.5,
       ease: 'back.out(1.5)',
+    });
+
+    tl.to('.circle', {
+      scrollTrigger: {
+        trigger: '.plantopi',
+        scrub: 1,
+        start: '50% top',
+        end: '+=20',
+      },
+
+      transformOrigin: 'center center',
+      scaleX: 0,
+      scaleY: 0,
+      stagger: {
+        each: 0.25,
+      },
+      duration: 0.5,
+      ease: 'back.in(1.5)',
     });
 
     return () => gsap.killTweensOf('.circle');
@@ -36,7 +55,7 @@ function PlantopiLogo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 298.59 298.6"
-      style={{ width: '100%', border: '1px solid red' }}
+      style={{ width: '70%', height: '70%' }}
     >
       <circle
         cx="149.29"

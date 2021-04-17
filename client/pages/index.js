@@ -1,6 +1,7 @@
 import Mountains from '@components/home/Mountains';
 import TechStack from '@components/projects/tech-stack';
 import PlantopiLogo from '@components/home/PlantopiLogo';
+import SynthesisLogo from '@components/home/SynthesisLogo';
 
 import LinkedIn from '@resources/icons/social/linkedin.svg';
 import GitHub from '@resources/icons/social/github.svg';
@@ -80,16 +81,14 @@ export default function Home() {
       </section>
       <section className={`${styles.plantopi} plantopi`}>
         <TransitionMountain className={styles.transitionMountain} />
-        <div className={styles.sectionText}>
+        <div className={styles.projectText}>
           <span className={styles.projectHeader}>
-            <h1>Plantopi</h1>{' '}
+            <h1>Plantopi</h1>
             <a
               href="https://github.com/dev-collectiv/plantopi"
               target="_blank"
-              aria-label="Link to GitHub profile"
-            >
-              <GitHub className={styles.socialIcon} />
-            </a>
+              aria-label="Link to Plantopi's GitHub repo"
+            ></a>
           </span>
           <p>
             Plantopi is an automatic irrigation system that allows plant owners
@@ -101,23 +100,39 @@ export default function Home() {
             makes use of Open Weather API for weather data.
           </p>
           <TechStack
-            layer="tech stack"
-            fill="#282a36"
+            fill="rgb(52, 61, 84)"
+            layer="Powered by"
             items="React,TypeScript,Sass,GSAP,NestJS,Socket.io,PostgreSQL,MQTT.js,Raspberry Pi,Mosquitto,Arduino"
           />
         </div>
         <PlantopiLogo />
       </section>
-      <section className={styles.synthesis}>
-        <h1>Synthesis</h1>
-        <p>
-          Synthesis is an open-source Digital Audio Workstation built in React
-          and Koa.js so that music producers can make beats from the comfort of
-          their browser. The app's library is furnished with thousands of
-          samples, various synthesizers, and digital effects to make music from
-          a wide range of genres.
-        </p>
-        <TechStack layer="tech stack" items="React,Sass,Tone.js,Koa,Node.js" />
+      <section className={`${styles.synthesis} synthesis`}>
+        <div className={styles.projectText}>
+          <span className={styles.projectHeader}>
+            <h1>Synthesis</h1>
+            <a
+              href="https://github.com/CxGarcia/synthesis"
+              target="_blank"
+              aria-label="Link to Synthesis' GitHub repo"
+            >
+              GitHub
+            </a>
+          </span>
+          <p>
+            Synthesis is an open-source Digital Audio Workstation built in React
+            and Koa.js that allows music producers to make beats from the
+            comfort of their browser. The app's library is furnished with
+            thousands of samples, various synthesizers, and digital effects to
+            make music from a wide range of genres.
+          </p>
+          <TechStack
+            fill="#e9e2cf"
+            layer="Powered by"
+            items="React,Sass,Tone.js,Koa,Node.js"
+          />
+        </div>
+        <SynthesisLogo />
       </section>
 
       <footer className={styles.footer}></footer>
