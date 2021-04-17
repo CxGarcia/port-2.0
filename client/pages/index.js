@@ -102,7 +102,8 @@ export default function Home() {
           </p>
           <TechStack
             layer="tech stack"
-            items="React,TypeScript,Sass,GSAP,NestJS,Socket.io,TypeORM,PostgreSQL,MQTT.js,Raspberry Pi,Mosquitto,NodeMCU"
+            fill="#282a36"
+            items="React,TypeScript,Sass,GSAP,NestJS,Socket.io,PostgreSQL,MQTT.js,Raspberry Pi,Mosquitto,Arduino"
           />
         </div>
         <PlantopiLogo />

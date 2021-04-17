@@ -96,6 +96,7 @@ $sections-padding: 2.5rem;
 }
 
 @mixin section-text($color) {
+  z-index: 1;
   h1,
   h2,
   h3,
@@ -122,6 +123,7 @@ $sections-padding: 2.5rem;
 }
 
 .intro {
+  @include section-text($font-color);
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
@@ -133,9 +135,9 @@ $sections-padding: 2.5rem;
 }
 
 .about {
+  @include section-text($secondary-font-color);
   flex-flow: column nowrap;
   align-items: center;
-  @include section-text($secondary-font-color);
 }
 
 .transitionMountain {
@@ -146,17 +148,18 @@ $sections-padding: 2.5rem;
 }
 
 .sectionText {
-  z-index: 1;
-  & > * {
-    margin: 1rem 0;
-  }
 }
 
 .plantopi {
   @include section-text($font-color);
+  border: 1px solid red;
   flex-flow: row nowrap;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100%;
+  & > * {
+    max-width: 50%;
+  }
 }
 
 .synthesis,

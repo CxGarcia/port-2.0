@@ -14,7 +14,7 @@ function PlantopiLogo() {
       scrollTrigger: {
         trigger: '.plantopi',
         scrub: 1,
-        start: '-10% top',
+        start: '-20% top',
         end: '+=40',
       },
       transformOrigin: 'center center',
@@ -36,7 +36,7 @@ function PlantopiLogo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 298.59 298.6"
-      style={{ width: '100%', height: '100%' }}
+      style={{ width: '100%', border: '1px solid red' }}
     >
       <circle
         cx="149.29"
