@@ -7,6 +7,7 @@ import LinkedIn from '@resources/icons/social/linkedin.svg';
 import GitHub from '@resources/icons/social/github.svg';
 import CV from '@resources/icons/social/cv.svg';
 import TransitionMountain from '@resources/others/section-transition-mountain.svg';
+import InvertedTransitionMountain from '@resources/others/inverted-section-transition-mountain.svg';
 
 import styles from '../styles/Home.module.scss';
 
@@ -46,7 +47,8 @@ export default function Home() {
         <div className={styles.sectionText}>
           <h2>
             Hey There! My name is Cristobal and I am a Full Stack Developer from
-            Venezuela
+            Venezuela. Welcome to my portfolio where you can check out some of
+            my work and more info about me.
           </h2>
         </div>
         <Mountains />
@@ -84,11 +86,15 @@ export default function Home() {
         <div className={styles.projectText}>
           <span className={styles.projectHeader}>
             <h1>Plantopi</h1>
-            <a
-              href="https://github.com/dev-collectiv/plantopi"
-              target="_blank"
-              aria-label="Link to Plantopi's GitHub repo"
-            ></a>
+            <span className={styles.projectLinks}>
+              <a
+                href="https://github.com/dev-collectiv/plantopi"
+                target="_blank"
+                aria-label="Link to Plantopi's GitHub repo"
+              >
+                GitHub Repo
+              </a>
+            </span>
           </span>
           <p>
             Plantopi is an automatic irrigation system that allows plant owners
@@ -100,7 +106,8 @@ export default function Home() {
             makes use of Open Weather API for weather data.
           </p>
           <TechStack
-            fill="rgb(52, 61, 84)"
+            // fill="rgb(52, 61, 84)"
+            fill="#161d30"
             layer="Powered by"
             items="React,TypeScript,Sass,GSAP,NestJS,Socket.io,PostgreSQL,MQTT.js,Raspberry Pi,Mosquitto,Arduino"
           />
@@ -108,16 +115,28 @@ export default function Home() {
         <PlantopiLogo />
       </section>
       <section className={`${styles.synthesis} synthesis`}>
+        <InvertedTransitionMountain
+          className={styles.invertedTransitionMountain}
+        />
         <div className={styles.projectText}>
           <span className={styles.projectHeader}>
             <h1>Synthesis</h1>
-            <a
-              href="https://github.com/CxGarcia/synthesis"
-              target="_blank"
-              aria-label="Link to Synthesis' GitHub repo"
-            >
-              GitHub
-            </a>
+            <span className={styles.projectLinks}>
+              <a
+                href="https://github.com/CxGarcia/synthesis"
+                target="_blank"
+                aria-label="Link to Synthesis' GitHub repo"
+              >
+                GitHub Repo
+              </a>
+              &nbsp; / &nbsp;
+              <a
+                href="https://cxgarcia.com/synthesis"
+                aria-label="Link to Synthesis' GitHub repo"
+              >
+                Live App
+              </a>
+            </span>
           </span>
           <p>
             Synthesis is an open-source Digital Audio Workstation built in React
@@ -129,7 +148,7 @@ export default function Home() {
           <TechStack
             fill="#e9e2cf"
             layer="Powered by"
-            items="React,Sass,Tone.js,Koa,Node.js"
+            items="React,Sass,Tone.js,GSAP,Koa,Node.js"
           />
         </div>
         <SynthesisLogo />

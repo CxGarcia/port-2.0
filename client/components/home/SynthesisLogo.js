@@ -8,7 +8,11 @@ if (typeof window !== 'undefined') {
 
 function SynthesisLogo() {
   useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, delay: 1, repeatDelay: 0.5 });
+    const tl = gsap.timeline({
+      repeat: -1,
+      delay: 1,
+      repeatDelay: 0.5,
+    });
 
     // tl.from('.barra', {
     //   scrollTrigger: {

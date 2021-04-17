@@ -61,22 +61,11 @@ $sections-padding: 2.5rem;
   align-items: top;
   justify-content: center;
   & > * {
+    @include shrink-hover;
     fill: white;
     margin: 0 0.5rem;
     width: 40px;
     height: 40px;
-  }
-}
-
-.projectHeader {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  & .socialIcon {
-    height: 20px;
-    width: 20px;
-    fill: $primary;
-    margin: 0 1rem;
   }
 }
 
@@ -106,7 +95,7 @@ $sections-padding: 2.5rem;
   & p {
     text-align: justify;
     text-justify: inter-word;
-    margin: 1rem 0;
+    margin: 0.75rem 0;
   }
 }
 
@@ -121,11 +110,13 @@ $sections-padding: 2.5rem;
   @include section-text($font-color);
   flex-flow: column nowrap;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   h2 {
     width: $text-container-width;
+    z-index: 5;
     color: $font-color;
     line-height: 2.5rem;
+    margin-top: 6rem;
   }
 }
 
@@ -135,11 +126,14 @@ $sections-padding: 2.5rem;
   align-items: center;
 }
 
+.invertedTransitionMountain,
 .transitionMountain {
   position: absolute;
+  min-width: 100vw;
+  max-width: 100vw;
+  // height: auto;
   top: 0;
   left: 0;
-  width: 100vw;
 }
 
 .plantopi {
@@ -154,6 +148,10 @@ $sections-padding: 2.5rem;
   }
   .projectSocialIcon {
     fill: $primary;
+  }
+
+  .projectLinks {
+    color: $font-color;
   }
 }
 
@@ -185,9 +183,38 @@ $sections-padding: 2.5rem;
   width: 40px;
 }
 
+.projectHeader {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  width: 100%;
+  & .socialIcon {
+    height: 20px;
+    width: 20px;
+    fill: $primary;
+    margin: 0 1rem;
+  }
+}
+.synthesis .projectLinks {
+  color: $secondary-font-color;
+}
+
+.plantopi .projectLinks {
+  color: $font-color;
+}
+
+.projectLinks {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  & > * {
+    @include shrink-hover;
+  }
+}
+
 .synthesis,
 .about {
-  background-color: #343d54;
+  background-color: $primary;
 }
 
 @keyframes blink {
