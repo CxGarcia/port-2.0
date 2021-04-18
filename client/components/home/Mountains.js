@@ -10,6 +10,10 @@ if (typeof window !== 'undefined') {
 
 function Mountains() {
   useEffect(() => {
+    gsap.set('.mountains', {
+      opacity: 1,
+    });
+
     gsap.from('.mountain', {
       y: 1000,
       stagger: 0.15,
@@ -45,7 +49,7 @@ function Mountains() {
   return (
     <svg
       fill="none"
-      className={styles.mountains}
+      className={`${styles.mountains} mountains`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 506"
     >

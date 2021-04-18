@@ -26,7 +26,11 @@ class MyDocument extends Document {
           <meta
             name="image"
             property="og:image"
-            content="%PUBLIC_URL%/og-port.png"
+            content="https://cxgarcia.com/og-port.png"
+          />
+          <meta
+            property="og:description"
+            content="cxgarcia's personal portfolio"
           />
         </Head>
         <body>

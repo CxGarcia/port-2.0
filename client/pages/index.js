@@ -106,7 +106,6 @@ export default function Home() {
             makes use of Open Weather API for weather data.
           </p>
           <TechStack
-            // fill="rgb(52, 61, 84)"
             fill="#161d30"
             layer="Powered by"
             items="React,TypeScript,Sass,GSAP,NestJS,Socket.io,PostgreSQL,MQTT.js,Raspberry Pi,Mosquitto,Arduino"
